@@ -12,8 +12,10 @@ function wezZadania(){
     return $wynik;
 }
 
+// #Koliduje z funkcją w Wartstwie prezentacji
 // function dodajZadanie(string $tytul, string $tresc){
-//     #Koliduje z funkcją w Wartstwie prezentacji
+//     $zapytanie = "INSERT INTO Zadania  (tytul,tresc) VALUES ($tytul,$tresc)";
+//     $zadanie = $GLOBALS['baza']->query($zapytanie);
 // }
 
 function usunZadania(int $id){
@@ -25,7 +27,8 @@ function daneZadanie(int $id, string $tytul, string $tresc){
 }
 
 function edytujZadania(int $id, string $tytul, string $tresc){
-    #TODO 
+    $zapytanie = "UPDATE Zadania SET tytul='$tytul', tresc='$tresc' WHERE id=$id";
+    $zadanie = $GLOBALS['baza']->query($zapytanie);
 }
 
 function pobierzDaneZadania(int $id){
