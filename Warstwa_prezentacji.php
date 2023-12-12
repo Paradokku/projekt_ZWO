@@ -1,7 +1,8 @@
 <?php
 require('Warstwa_biznesowa.php');
+$array = [];
 
-wyswietlZadania();
+wyswietlZadania($array);
 
 function dodajZadanie(){
     wbDodajZadanie();
