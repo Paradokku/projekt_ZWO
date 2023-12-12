@@ -26,15 +26,16 @@ function daneZadanie(int $id, string $tytul, string $tresc){
     #Nie używane w żadnym diagramie
 }
 
-function edytujZadania(int $id, string $tytul, string $tresc){
-    $zapytanie = "UPDATE Zadania SET tytul='$tytul', tresc='$tresc' WHERE id=$id";
-    $zadanie = $GLOBALS['baza']->query($zapytanie);
-}
+// function edytujZadanie(int $id, string $tytul, string $tresc){
+//     $zapytanie = "UPDATE Zadania SET tytul='$tytul', tresc='$tresc' WHERE id=$id";
+//     $zadanie = $GLOBALS['baza']->query($zapytanie);
+// }
 
 function pobierzDaneZadania(int $id){
     $zapytanie = "SELECT * FROM Zadania WHERE id=$id";
     $zadanie = $GLOBALS['baza']->query($zapytanie);
     return $zadanie;
+    
 }
 
 ?>

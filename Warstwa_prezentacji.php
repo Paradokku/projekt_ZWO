@@ -19,10 +19,11 @@ $array = [];
 
 wyswietlZadania($array);
 
+
 function dodajZadanie(){
     $tytul = $_POST['tytul'];
     $tresc = $_POST['tresc'];
-    
+
     if ($warunek == 'zatwierdzono'){
         wbDodajZadanie();
     } elseif ($warunek == 'anulowano') {
@@ -36,9 +37,12 @@ function usunZadanie(int $id){
 }
 
 function edytujZadanie(int $id){
-    $zadanie = wbPobierzDaneZadania($id,'','');
+    $zadanie = wbPobierzDaneZadania($id,'hm','mh');
     $tytul = $_POST['tytul'];
     $tresc = $_POST['tresc'];
+
+    //testing
+    $warunek = 'zatwierdzono';
 
     if ($warunek == 'zatwierdzono'){
         wbEdytujZadanie($id,$tytul,$tresc);
