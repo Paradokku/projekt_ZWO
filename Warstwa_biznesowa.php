@@ -7,11 +7,11 @@ function pobierzZadanie(){
 }
 
 function wbDodajZadanie(string $tytul, string $tresc){
-    #TODO
+    dodajZadanie($tytul,$tresc);
 }
 
 function wbUsunZadanie(int $id){
-    #TODO
+    #Nie używane w żadnym diagramie
 }
 
 function wbPobierzDaneZadania(int $id, string $tytul, string $tresc){
@@ -19,6 +19,6 @@ function wbPobierzDaneZadania(int $id, string $tytul, string $tresc){
 }
 
 function wbEdytujZadanie(int $id, string $tytul, string $tresc){
-    #TODO
+    edytujZadanie($id,$tytul,$tresc);
 }
 ?>
