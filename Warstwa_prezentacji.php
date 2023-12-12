@@ -2,7 +2,7 @@
 <body>
         <h1>Aplikacja TODO</h1>
         <h3>Dodaj Zadanie:</h3>
-        <form action="dodajZadanie()" method="post">
+        <form action="" method="post">
             Id:    <input type="text" name="id"><br>
             Tytul: <input type="text" name="tytul"><br>
             Tresc: <input type="text" name="tresc"><br>
@@ -20,8 +20,14 @@ $array = [];
 wyswietlZadania($array);
 
 function dodajZadanie(){
-    wbDodajZadanie();
-    #Tutaj użytkownik uruchamia u siebie wyswietlZadania()
+    $tytul = $_POST['tytul'];
+    $tresc = $_POST['tresc'];
+    
+    if ($warunek == 'zatwierdzono'){
+        wbDodajZadanie();
+    } elseif ($warunek == 'anulowano') {
+        #Tutaj użytkownik uruchamia u siebie wyswietlZadania()
+    }
 }
 
 function usunZadanie(int $id){
@@ -31,9 +37,11 @@ function usunZadanie(int $id){
 
 function edytujZadanie(int $id){
     $zadanie = wbPobierzDaneZadania($id,'','');
+    $tytul = $_POST['tytul'];
+    $tresc = $_POST['tresc'];
 
     if ($warunek == 'zatwierdzono'){
-
+        wbEdytujZadanie($id,$tytul,$tresc);
     } elseif ($warunek == 'anulowano') {
         #Tutaj użytkownik uruchamia u siebie wyswietlZadania()
     }
